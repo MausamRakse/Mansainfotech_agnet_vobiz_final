@@ -7,3 +7,5 @@ livekit-plugins-silero>=0.6.0
 livekit-plugins-noise-cancellation
 python-dotenv>=1.0.0
 livekit-plugins-groq
+numpy<2
+protobuf<5
