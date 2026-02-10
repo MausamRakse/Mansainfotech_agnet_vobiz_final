@@ -11,3 +11,16 @@ __pycache__/
 # IDE settings
 .vscode/
 .idea/
+
+# Logs
+*.log
+recordings_audio/
+transcripts/
+transcripts_json/
+
+# Build artifacts
+frontend/dist/
+frontend/node_modules/
+
+# Temporary test scripts
+test_dispatch.py

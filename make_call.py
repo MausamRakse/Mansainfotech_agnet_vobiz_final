@@ -10,7 +10,7 @@ from livekit import api
 load_dotenv(".env")
 
 async def main():
-    parser = argparse.ArgumentParser(description="Make an outbound call via LiveKit Agent.")
+    parser = argparse.ArgumentParser(description="Make an outbound call via Transcription Agent.")
     parser.add_argument("--to", required=True, help="The phone number to call (e.g., +91...)")
     args = parser.parse_args()
 
@@ -40,10 +40,10 @@ async def main():
 
     try:
         # 4. Dispatch the Agent
-        # We explicitly tell LiveKit to send the 'outbound-caller' agent to this room.
+        # We explicitly tell LiveKit to send the 'transcription-agent' agent to this room.
         # We pass the phone number in the 'metadata' field so the agent knows who to dial.
         dispatch_request = api.CreateAgentDispatchRequest(
-            agent_name="outbound-caller", # Must match agent.py
+            agent_name="transcription-agent", # Must match transcription_agent.py
             room=room_name,
             metadata=json.dumps({"phone_number": phone_number})
         )

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+openpyxl
+python-multipart
+pydantic
+requests
+livekit-api>=0.6.0
+python-dotenv
