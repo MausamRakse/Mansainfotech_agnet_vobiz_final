@@ -4,10 +4,9 @@
 export ORT_LOGGING_LEVEL=3
 
 # Start the LiveKit Agent in the background
-# We use --dev to avoid some production check constraints if needed, 
-# but for Render 'start' is usually correct.
-# We set the health check port to something else to avoid Render's auto-detection confusion
-python agent.py start --http-server-port 8081 &
+# We remove the invalid --http-server-port flag. 
+# The agent will use its default internal port for health checks (typically 8081)
+python agent.py start &
 
 # Start the FastAPI Backend
 # binding to 0.0.0.0 and the port Render provides
