@@ -463,7 +463,6 @@ async def entrypoint(ctx: agents.JobContext):
         room=ctx.room,
         agent=OutboundAssistant(),
         room_input_options=RoomInputOptions(
-            noise_cancellation=noise_cancellation.BVCTelephony(),
             close_on_disconnect=True,
         ),
     )
