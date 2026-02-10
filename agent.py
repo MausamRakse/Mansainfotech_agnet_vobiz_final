@@ -14,10 +14,12 @@ from livekit.agents import AgentSession, Agent, RoomInputOptions, llm
 from livekit.plugins import (
     cartesia,
     deepgram,
-    noise_cancellation,
     silero,
     groq,
 )
+
+# Only import noise cancellation if specifically needed to save memory
+# from livekit.plugins import noise_cancellation
 
 # Attempt to import openai if available
 try:
